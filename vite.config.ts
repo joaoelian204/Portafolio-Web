@@ -6,10 +6,15 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: 'pages''assets', // carpeta que quieres copiar
-          dest: ''      // se copia directamente dentro de dist/
+          src: 'pages',
+          dest: ''
+        },
+        {
+          src: 'assets',
+          dest: ''
         }
       ]
     })
   ]
 })
+
