@@ -1,5 +1,15 @@
-import tailwindcss from "@tailwindcss/vite";
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
+
 export default defineConfig({
-  plugins: [tailwindcss()],
-});
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'pages', // carpeta que quieres copiar
+          dest: ''      // se copia directamente dentro de dist/
+        }
+      ]
+    })
+  ]
+})
