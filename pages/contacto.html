@@ -13,15 +13,23 @@
 <body class="bg-gray-50 min-h-screen flex flex-col">
   <header class="bg-white shadow-md sticky top-0 z-50">
     <nav class="container mx-auto px-4 py-4">
-      <ul class="flex justify-center space-x-8">
-        <li><a href="../index.html" class="text-gray-600 hover:text-gray-800 font-medium">Dashboard</a></li>
-        <li><a href="habilidades.html" class="text-gray-600 hover:text-gray-800 font-medium">Habilidades</a></li>
-        <li><a href="certificados.html" class="text-gray-600 hover:text-gray-800 font-medium">Certificados</a></li>
-        <li><a href="proyectos.html" class="text-gray-600 hover:text-gray-800 font-medium">Proyectos</a></li>
-        <li><a href="contacto.html" class="text-blue-600 hover:text-blue-800 font-medium">Contáctame</a></li>
-      </ul>
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <a href="../index.html" class="text-2xl font-bold text-blue-600 mb-4 md:mb-0">JM</a>
+        <input type="checkbox" id="nav-toggle" class="hidden peer">
+        <label for="nav-toggle" class="md:hidden cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <ul class="hidden peer-checked:flex flex-col md:flex md:flex-row absolute md:relative top-full left-0 right-0 bg-white md:bg-transparent shadow-lg md:shadow-none p-4 md:p-0 space-y-4 md:space-y-0 md:space-x-8 items-center">
+          <li><a href="../index.html" class="text-gray-600 hover:text-gray-800 font-medium block">Dashboard</a></li>
+          <li><a href="habilidades.html" class="text-gray-600 hover:text-gray-800 font-medium block">Habilidades</a></li>
+          <li><a href="certificados.html" class="text-gray-600 hover:text-gray-800 font-medium block">Certificados</a></li>
+          <li><a href="proyectos.html" class="text-gray-600 hover:text-gray-800 font-medium block">Proyectos</a></li>
+          <li><a href="contacto.html" class="text-blue-600 hover:text-blue-800 font-medium block">Contáctame</a></li>
+        </ul>
+      </div>
     </nav>
-
   </header>
 
   <main class="flex-grow container mx-auto px-4 py-12">
