@@ -12,9 +12,14 @@ export default defineConfig({
         {
           src: 'assets',
           dest: ''
+        },
+        {
+          src: 'assets/pdf_certificados/*.pdf',
+          dest: 'assets/pdf_certificados'
         }
       ]
     })
   ]
 })
+
 
