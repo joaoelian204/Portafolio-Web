@@ -15,11 +15,13 @@ export default defineConfig({
         },
         {
           src: 'assets/pdf_certificados/*.pdf',
-          dest: 'assets/pdf_certificados'
+          dest: 'assets/pdf_certificados',
+          failOnMissing: false
         },
         {
           src: 'assets/CV/*.pdf',
-          dest: 'assets/CV'
+          dest: 'assets/CV',
+          failOnMissing: false
         }
       ]
     })
