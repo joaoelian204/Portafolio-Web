@@ -16,6 +16,10 @@ export default defineConfig({
         {
           src: 'assets/pdf_certificados/*.pdf',
           dest: 'assets/pdf_certificados'
+        },
+        {
+          src: 'assets/CV/*.pdf',
+          dest: 'assets/CV'
         }
       ]
     })
