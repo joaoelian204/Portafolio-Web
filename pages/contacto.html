@@ -123,7 +123,10 @@
     Enviar mensaje
   </button>
 </form>
-
+  <!-- Notificación flotante -->
+<div id="toast" class="fixed top-5 right-5 z-50 hidden bg-green-100 border border-green-400 text-green-800 px-6 py-4 rounded-lg shadow-lg transition-all duration-300">
+  ✅ Formulario enviado correctamente.
+</div>
 
       </article>
     </section>
@@ -223,6 +226,40 @@
       </div>
     </div>
   </footer>
+
+  <script>
+  const form = document.getElementById("formulario-contacto");
+  const toast = document.getElementById("toast");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      form.reset(); // Limpiar campos del formulario
+
+      // Mostrar el toast
+      toast.classList.remove("hidden");
+      toast.classList.add("opacity-100");
+
+      // Ocultarlo después de 4 segundos
+      setTimeout(() => {
+        toast.classList.add("hidden");
+        toast.classList.remove("opacity-100");
+      }, 4000);
+
+    } catch (error) {
+      alert("❌ Ocurrió un error al enviar el formulario.");
+    }
+  });
+</script>
 
 </body>
 
